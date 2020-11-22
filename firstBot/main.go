@@ -6,6 +6,7 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
+// https://github.com/bwmarrin/discordgo/blob/master/examples/pingpong/main.go
 var (
 	clientID     = "779966919733542952"
 	clientSecret = "yrre588AZavqZmdCr35GUp52jJcELZju"
