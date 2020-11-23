@@ -7,17 +7,14 @@ import (
 	"syscall"
 
 	"github.com/bwmarrin/discordgo"
-)
-
-// Variables used for command line parameters
-var (
-	Token = "Nzc5OTY2OTE5NzMzNTQyOTUy.X7oOzA.RxzrI-52LQN-x86cjdhdqWllWCs"
+	"github.com/joho/godotenv"
 )
 
 func main() {
-
+	godotenv.Load("tokens.env")
+	token := os.Getenv("TOKEN")
 	// Create a new Discord session using the provided bot token.
-	dg, err := discordgo.New("Bot " + Token)
+	dg, err := discordgo.New("Bot " + token)
 	if err != nil {
 		fmt.Println("error creating Discord session,", err)
 		return
@@ -65,6 +62,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	if m.Content == "!pic" {
 		dog := MakeRequest()
-		FetchImage(dog.url)
+		fmt.Println("url -> ", dog.url)
+		// FetchImage(dog.url)
 	}
 }
