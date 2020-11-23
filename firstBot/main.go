@@ -49,20 +49,41 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	// Ignore all messages created by the bot itself
 	// This isn't required in this specific example but it's a good practice.
-	if m.Author.ID == s.State.User.ID {
-		return
-	}
-
-	fmt.Println(m.Author)
-	fmt.Println(m.Author.Username)
-	// If the message is "ping" reply with "Pong!"
-	// if m.Author.Username == "Ed" {
-	// 	s.ChannelMessageSend(m.ChannelID, "no")
+	// if m.Author.ID == s.State.User.ID {
+	// 	return
 	// }
 
 	if m.Content == "!pic" {
 		dog := MakeRequest()
-		fmt.Println("url -> ", dog.Url)
-		// FetchImage(dog.url)
+		fmt.Print("|	url -> ", dog.Url, "\n\n")
+		// if the url is an mp4 then we just want to return
+		dataType := dog.Url[len(dog.Url)-4:]
+		validTypes := []string{".jpg", ".png"}
+		if mayContain(dataType, validTypes) {
+			imageName := FetchImage(dog.Url)
+			file, err := os.Open(imageName)
+			defer file.Close()
+			if err != nil {
+				fmt.Println("failed to open file for reading -> ", err)
+				s.ChannelMessageSend(m.ChannelID, "failed to send image :(")
+				s.ChannelMessageSend(m.ChannelID, "!pic")
+				return
+			}
+			s.ChannelFileSend(m.ChannelID, dog.Url, file)
+			s.ChannelMessageSend(m.ChannelID, "!pic")
+		} else {
+			s.ChannelMessageSend(m.ChannelID, "could not load an image, try sending the command again")
+			s.ChannelMessageSend(m.ChannelID, "!pic")
+		}
 	}
+
+}
+
+func mayContain(d string, s []string) bool {
+	for i := 0; i < len(s); i++ {
+		if d == s[i] {
+			return true
+		}
+	}
+	return false
 }
