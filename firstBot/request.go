@@ -9,8 +9,8 @@ import (
 )
 
 type DogPic struct {
-	fileSizeBytes int64
-	url           string
+	FileSizeBytes int64
+	Url           string
 }
 
 var apiUrl = "https://random.dog/woof.json"

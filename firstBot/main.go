@@ -62,7 +62,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	if m.Content == "!pic" {
 		dog := MakeRequest()
-		fmt.Println("url -> ", dog.url)
+		fmt.Println("url -> ", dog.Url)
 		// FetchImage(dog.url)
 	}
 }
