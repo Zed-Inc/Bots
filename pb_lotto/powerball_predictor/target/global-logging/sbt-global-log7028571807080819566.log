@@ -1,0 +1,11 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(3e9381ac-1ee8-4c54-a8ac-ee4f9669630c), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/zed/Projects/pb_lotto/powerball_predictor/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zed/Projects/pb_lotto/powerball_predictor/src/main/scala/Main.scala:95:1: ')' expected but '}' found.[0m
+[0m[[0m[31merror[0m] [0m[0m}[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 0 s, completed 9 Apr 2021, 11:38:35 pm[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

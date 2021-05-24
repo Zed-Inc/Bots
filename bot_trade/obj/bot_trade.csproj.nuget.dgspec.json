@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/zed/Projects/bot_trade/bot_trade.csproj": {}
+  },
+  "projects": {
+    "/Users/zed/Projects/bot_trade/bot_trade.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/zed/Projects/bot_trade/bot_trade.csproj",
+        "projectName": "bot_trade",
+        "projectPath": "/Users/zed/Projects/bot_trade/bot_trade.csproj",
+        "packagesPath": "/Users/zed/.nuget/packages/",
+        "outputPath": "/Users/zed/Projects/bot_trade/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/zed/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AlphaVantage.Net.Core": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "AlphaVantage.Net.Stocks": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

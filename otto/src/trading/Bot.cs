@@ -1,0 +1,7 @@
+using TradingWallet;
+
+
+namespace Bot
+{
+
+}

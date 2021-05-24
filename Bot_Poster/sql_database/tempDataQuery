@@ -1,0 +1,44 @@
+
+
+INSERT INTO posts (
+                      postID,-- primary key
+                      title,
+                      pulled,
+                      link,
+                      boards,-- boards is a string of boards seperated by commas or another divisor
+                      image,
+                      [desc]
+                  )
+                  VALUES (
+                      "post1",
+                      "first post",
+                      0,
+                      "test link",
+                      "test board",
+                      "this would be the image bitmap blob",
+                      "the posts description"
+                  ),
+                   (
+                      "post2",
+                      "second post",
+                      0,
+                      "test link",
+                      "test board",
+                      "this would be the image bitmap blob",
+                      "the posts description"
+                  );
+
+
+
+INSERT INTO scheduled (
+                          postID,-- foreign key
+                          dateAdded
+                      )
+                      VALUES (
+                          "post1",
+                          "2021-03-25" -- DATE is in the format yyyy-mm-dd
+                      ),
+                      (
+                          "post2",
+                          "2021-03-25" -- DATE is in the format yyyy-mm-dd
+                      );
